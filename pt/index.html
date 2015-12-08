@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Onyo Inc</title>
+
+  <link rel='shortcut icon' href='../assets/images/favicon.ico'/>
+  <link rel="stylesheet" href='../assets/css/main.css'>
+  <link rel='stylesheet' href='../assets/css/Lato.css'>
+</head>
+<body data-format="consumer">
+  <div id="menu">
+    <a class="about" href="/about">about</a>
+    <a class="places" href="/places">places</a>
+    <a class="talk" href="/contact">contact</a>
+  </div>
+  <section class="container">
+    <div class="nav">
+      <div class="nav-toggle">
+        <span></span>
+      </div>
+    </div>
+    <div class="login">
+      <a href="../index.html" class="lang">en</a>
+      <a href="http://admin.onyo.com">LOGIN</a>
+      <a href="restaurant.html" class="type">RESTAURANTE</a>
+    </div>
+    <div id="slideCntrl">
+      <div class="active"></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div id="slide" class="block section">
+      <div class="background">
+        <img src="../assets/images/slide_home_1.jpg">
+      </div>
+      <div class="content">
+        <div class="data">
+          <img src="../assets/images/icon-logo-onyo.png">
+          <h4>Acreditamos que comer fora</h4>
+          <p>deve ser uma experiência apenas prazerosa</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="block">
+      <p><img src="../assets/images/icon-play.png"></p>
+    </div> -->
+    <div class="block light">
+      <p><a id="button" class="btn talk" href="#">lets talk</a></p>
+    </div>
+    <div id="about" class="block section typing">
+      <div class="background">
+        <img src="../assets/images/slide_home_block.jpg">
+      </div>
+      <div class="content">
+        <div class="data">
+          <img src="../assets/images/icon-logo-onyo.png">
+          <div class="texts">
+            <h4></h4>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <a class="item"></a>
+        <a class="item"></a>
+      </div>
+    </div>
+    <div class="block boxes consumer">
+      <div class="grid">
+        <div class="flexBox">
+          <img src="../assets/images/icons/clock.png">
+          <h3>60</h3>
+          <span class="details">Você sabia que você pode perder mais de 60 horas por ano em ineficiências na sua típica e recorrente experiência de comer fora?</span>
+        </div>
+        <div class="flexBox">
+          <img src="../assets/images/icons/calendar.png">
+          <h3>90%</h3>
+          <span class="details">Você come nos mesmos lugares toda semana e isso em nada melhora a sua experiência da semana seguinte?</span>
+        </div>
+      </div>
+    </div>
+    <div id="places" class="block cities">
+      <div class="grid">
+        <div class="flexCity CA" data-city='CA'>
+          <div class="content">
+            <h2>CA</h2>
+            <p>california</p>
+            <p>+1 (408) 890-2102</p>
+            <span class="more">+</span>
+          </div>
+        </div>
+        <div class="flexCity SP" data-city='SP'>
+          <div class="content">
+            <h2>SP</h2>
+            <p>são paulo</p>
+            <p>+55 (21) 3942-2102</p>
+            <span class="more">+</span>
+          </div>
+        </div>
+        <div class="flexCity RJ" data-city='RJ'>
+          <div class="content">
+            <h2>RJ</h2>
+            <p>rio de janeiro</p>
+            <p>+55 (21) 3942-2102</p>
+            <span class="more">+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block section form" id="form">
+      <div class="background">
+        <img src="../assets/images/footer_background.jpg">
+      </div>
+      <div class="content">
+        <div class="data">
+          <h2>SP</h2>
+          <p>são paulo</p>
+          <p>+ 20 392 2291023</p>
+          <div class="inputs">
+            <form id="contact" action="http://api.staging.onyo.com/v1/web/message">
+              <p><input name="email" type="email" placeholder="seu e-mail" required></p>
+              <p><input name="phone" type="text" placeholder="seu telefone"></p>
+              <p><textarea name="message" placeholder="mensagem" id="message" cols="10" rows="3" required></textarea></p>
+              <p><input type="submit" value="" /></p>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="content emailResponse">
+        <div class="data">
+          <h2>Mensagem enviada com sucesso! :)</h2>
+        </div>
+      </div>
+      <div class="content errorResponse">
+        <div class="data">
+          <h2>Aconteceu um erro ao enviar sua mensagem! :(</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="content">
+      <div class="left"><a href="/"><img src="../assets/images/icon-logo-onyo-small.png" alt="Onyo"></a></div>
+      <div class="right"><a href="#" id="manual-ajax">Termos e condições</a></div>
+    </div>
+  </footer>
+  <div class="modal">
+    <h2>Termos e condições</h2>
+    <p></p>
+  </div>
+
+<!-- jQuery 1.11.2 -->
+<script src="../assets/js/jquery-1.11.2.min.js"></script>
+
+<!-- Typed • Docs: https://github.com/mattboldt/typed.js/ -->
+<script src="../assets/js/typed.min.js"></script>
+
+<!-- Modal • Docs: https://github.com/kylefox/jquery-modal -->
+<script type="text/javascript" src="../assets/js/modal.min.js"></script>
+<script>
+  $('#manual-ajax').on('click', function(event) {
+    event.preventDefault();
+    $.get('http://api.onyo.com/v1/mobile/onyo/terms', function(res) {
+        $('.modal p').text(res.text);
+        $('.modal').modal({
+          closeText: 'Fechar'
+        });
+      });
+  });
+</script>
+
+<!-- Environment.js -->
+<script src="../assets/js/environment.js"></script>
+
+<!-- App.js -->
+<script src="../assets/js/app.js"></script>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53584757-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
