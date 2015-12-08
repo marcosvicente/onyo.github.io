@@ -45,7 +45,6 @@ $(window).load(function(){
 			message = $('#contact [name=message]')[0].value;
 
 		var formData = {email: email, phone: phone, message: message};
-		console.log(formData);
 		$.ajax({
 			method: 'POST',
 			url: url,
