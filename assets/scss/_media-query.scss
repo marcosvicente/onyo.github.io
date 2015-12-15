@@ -1,0 +1,118 @@
+/*
+ * Media Queries
+*/
+
+@media only screen and (max-width: 768px)
+{
+    #slideCntrl
+    {
+        display: none;
+    }
+
+    .section > .background img
+    {
+        width: 768px;
+    }
+
+    .block.boxes
+    {
+        display: none;
+    }
+    .login .type,
+    .login .lang
+    {
+        display: none;
+    }
+
+    footer .left,
+    footer .right
+    {
+        position: relative;
+
+        float: none !important;
+
+        margin: 0 auto;
+    }
+    footer .left
+    {
+        width: 73px;
+    }
+    footer .right
+    {
+        width: 160px;
+        padding-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 1016px)
+{
+    .container .block.light > p
+    {
+        padding: 170px 60px;
+    }
+    .container > .block > p > .btn
+    {
+        font-size: 40px;
+
+        padding: 20px 105px;
+    }
+    .container .nav-toggle img
+    {
+        height: 35px;
+    }
+
+    .section.typing > .content img
+    {
+        height: 70px;
+    }
+    .section.typing > .content h4,
+    .section.typing > .content p
+    {
+        padding: 0 60px;
+    }
+    .section.typing > .content h4
+    {
+        line-height: 1.6em;
+
+        margin-top: -30px;
+        padding: 0 60px;
+        padding-top: 70px;
+    }
+
+
+    .block.cities > .grid > .flexCity
+    {
+        height: 350px;
+    }
+    .block.cities > .grid > .flexCity .content > h2
+    {
+        font-size: 70px;
+
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 648px)
+{
+    .login
+    {
+        visibility: hidden;
+    }
+
+    .container > .block > p > .btn
+    {
+        font-size: 42px;
+
+        padding: 19px 75px;
+    }
+
+    .container .block.light > p
+    {
+        padding: 170px 10px;
+    }
+
+    .section.typing > .content p
+    {
+        display: none;
+    }
+}

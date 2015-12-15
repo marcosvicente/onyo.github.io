@@ -1,0 +1,52 @@
+.modal
+{
+    line-height: 1.4em;
+
+    display: none;
+    overflow: scroll;
+
+    width: 760px;
+    height: 600px;
+    padding: 35px;
+
+    text-align: justify;
+
+    color: #555;
+    border-radius: 8px;
+    background: #fff;
+        box-shadow: 0 0 10px #000;
+
+     -o-box-shadow: 0 0 10px #000;
+    -ms-box-shadow: 0 0 10px #000;
+}
+.modal h2
+{
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+.modal a
+{
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #555;
+}
+.modal-spinner
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    display: none;
+
+    width: 64px;
+    height: 64px;
+    margin-top: -32px;
+    margin-right: -32px;
+
+    border-radius: 8px;
+}

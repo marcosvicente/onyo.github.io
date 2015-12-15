@@ -8,7 +8,7 @@ $(window).load(function(){
         typeSpeed: 20,
         startDelay: 1000,
         backDelay: 1000,
-        loop: true,
+        loop: false,
       });
 
 	$('.about').on('click', function(event) {
@@ -29,10 +29,20 @@ $(window).load(function(){
     	return false;
 	});
 
+
 	$('.talk').on('click', function(event) {
 		event.preventDefault();
    		$('html, body').animate({
         	scrollTop: $("#form").offset().top
+    	}, 1200);
+
+    	return false;
+	});
+
+	$('.jobs').on('click', function(event) {
+		event.preventDefault();
+   		$('html, body').animate({
+        	scrollTop: $("#jobs").offset().top
     	}, 1200);
 
     	return false;
@@ -115,22 +125,22 @@ $(window).load(function(){
 
 		++actual;
 
-		if (actual <= controls.length) {
-			var url = 'assets/images/slide_home_' + actual + '.jpg';
+		// if (actual <= controls.length) {
+		// 	var url = 'assets/images/slide_home_' + actual + '.jpg';
 
-			if (env.lang != 'en') {
-				url = '../assets/images/slide_home_' + actual + '.jpg';
-			}
+		// 	if (env.lang != 'en') {
+		// 		url = '../assets/images/slide_home_' + actual + '.jpg';
+		// 	}
 
-			$(image).fadeOut(700, function() {
-				$(this).attr('src', url);
-				title.text(texts[actual - 1].title);
-				description.text(texts[actual - 1].description);
-				controls.removeClass('active');
-				$(controls[actual - 1]).addClass('active');
-			}).fadeIn(600);
-		} else {
-			actual = 0;
-		}
+		// 	$(image).fadeOut(700, function() {
+		// 		$(this).attr('src', url);
+		// 		title.text(texts[actual - 1].title);
+		// 		description.text(texts[actual - 1].description);
+		// 		controls.removeClass('active');
+		// 		$(controls[actual - 1]).addClass('active');
+		// 	}).fadeIn(600);
+		// } else {
+		// 	actual = 0;
+		// }
 	}, 4000);
 });

@@ -1,0 +1,101 @@
+@font-face
+{
+    font-family: 'Lato';
+    font-weight: 100;
+    font-style: normal;
+
+    src: local('Lato Hairline'), local('Lato-Hairline'), url(http://fonts.gstatic.com/s/lato/v11/Kom15zUm24dIPfIRiNogNuvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+@font-face
+{
+    font-family: 'Lato';
+    font-weight: 300;
+    font-style: normal;
+
+    src: local('Lato Light'), local('Lato-Light'), url(http://fonts.gstatic.com/s/lato/v11/kcf5uOXucLcbFOydGU24WALUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face
+{
+    font-family: 'Lato';
+    font-weight: 400;
+    font-style: normal;
+
+    src: local('Lato Regular'), local('Lato-Regular'), url(http://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face
+{
+    font-family: 'Lato';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Lato Bold'), local('Lato-Bold'), url(http://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+
+/* Reset */
+*
+{
+    font-size: 100%;
+    line-height: 1em;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-decoration: none;
+
+    border: 0;
+    outline: 0;
+}
+main:after,
+nav:after,
+footer:after,
+header:after,
+section:after,
+form:after,
+div:after,
+ul:after,
+ol:after,
+li:after,
+dl:after
+{
+    display: block;
+    visibility: hidden;
+    clear: both;
+    overflow: hidden;
+
+    height: 0;
+
+    content: '.';
+}
+
+hr
+{
+    display: none;
+}
+p
+{
+    line-height: 1.5em;
+}
+
+html,
+body
+{
+    font: normal 300 20px 'Lato Regular', 'Lato', helvetica;
+
+    width: 100%;
+
+    color: #fff;
+    background: #152830;
+}
+%clearfix:after
+{
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+    content: '.';
+}
