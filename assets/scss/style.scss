@@ -702,8 +702,16 @@ textarea
 {
     padding: 170px 0;
 
-    color: #3cb8ea;
-    background-color: #ecf0f1;
+    color: #ccc;
+    h2
+    {
+        font-size: 40px;
+        font-weight: 300;
+
+        padding-bottom: 40px;
+
+        text-align: center;
+    }
     .rbox-widget
     {
         margin: 0;
@@ -722,8 +730,8 @@ textarea
             transition: all 300ms ease;
             letter-spacing: .1em;
 
-            color: #81bdd5;
-            border: 2px solid #81bdd5;
+            color: #ccc;
+            border: 2px solid #ccc;
             border-radius: 0;
             background: transparent;
             text-shadow: none;
@@ -739,15 +747,15 @@ textarea
     {
         width: 700px;
         margin: auto;
-	    a
-	    {
-	        color: #3cb8ea;
-	    }
+        a
+        {
+            color: #ccc;
+        }
     }
     .rbox-opening-position-type,
     .rbox-opening-allows-remote
     {
-        border-color: #3cb8ea;
+        border-color: #ccc;
     }
     .rbox-opening-li
     {
@@ -838,7 +846,7 @@ textarea
             #candidate_last_name,
             #resume
             {
-                margin-left: 10px;
+                margin-left: 8px;
             }
             #resume input
             {
@@ -865,7 +873,7 @@ textarea
                 color: gray;
                 border: 1px solid #ccc;
                 border-radius: 0;
-                background: rgba(255,255,1255, .4);
+                background: transparent;
             }
         }
     }

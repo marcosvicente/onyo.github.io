@@ -7,10 +7,8 @@ $(window).load(function(){
         contentType: 'html',
         typeSpeed: 20,
         startDelay: 1000,
-        backDelay: 1000,
-        loop: false,
+        backDelay: 1000
       });
-
 	$('.about').on('click', function(event) {
 		event.preventDefault();
    		$('html, body').animate({
