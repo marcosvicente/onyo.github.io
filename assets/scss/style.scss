@@ -75,11 +75,12 @@
     .block.light
     {
         padding: 170px;
+
         text-align: center;
     }
     .block.light > a
     {
-    	display: inline-block;
+        display: inline-block;
     }
 }
 
@@ -291,6 +292,12 @@
             height: 122px;
         }
     }
+    &.typing > .content.reset-margin .data
+    {
+        height: 750px;
+        margin-top: 0;
+        padding-top: 230px;
+    }
     /* Controls */
     > .controls
     {
@@ -326,6 +333,11 @@
     {
         color: #fff;
         background: #00a2d0;
+    }
+    &.typing
+    {
+        background-image: url('../images/slide_home_block.jpg');
+        background-position: top center;
     }
     /* Block Boxes */
     &.boxes
@@ -471,36 +483,36 @@
                 {
                     background: url('../images/cities/CA.png') no-repeat;
                     background-position: center top;
-                    background-size: 100% 100%;
+                    background-size: cover;
                     &:hover
                     {
                         background: url('../images/cities/CA-color.png') no-repeat;
                         background-position: center top;
-                        background-size: 100% 100%;
+                        background-size: cover;
                     }
                 }
                 &.SP
                 {
                     background: url('../images/cities/SP.png') no-repeat;
                     background-position: center top;
-                    background-size: 100% 100%;
+                    background-size: cover;
                     &:hover
                     {
                         background: url('../images/cities/SP-color.png') no-repeat;
                         background-position: center top;
-                        background-size: 100% 100%;
+                        background-size: cover;
                     }
                 }
                 &.RJ
                 {
                     background: url('../images/cities/RJ.png') no-repeat;
                     background-position: center top;
-                    background-size: 100% 100%;
+                    background-size: cover;
                     &:hover
                     {
                         background: url('../images/cities/RJ-color.png') no-repeat;
                         background-position: center top;
-                        background-size: 100% 100%;
+                        background-size: cover;
                     }
                 }
                 .content
@@ -562,6 +574,8 @@
 /* Form */
 .form
 {
+    background-image: url('../images/footer_background.jpg');
+    background-position: top center;
     > .content
     {
         margin-bottom: 0;
@@ -683,6 +697,181 @@ textarea
 {
     display: none;
 }
+
+#jobs
+{
+    padding: 170px 0;
+
+    color: #3cb8ea;
+    background-color: #ecf0f1;
+    .rbox-widget
+    {
+        margin: 0;
+        .rbox-field-wrapper.rbox-error .rbox-error-msg
+        {
+            font-size: 13px;
+        }
+        .rbox-btn:first-child
+        {
+            font-weight: 300;
+            font-style: italic;
+
+            padding: 11px 20px;
+
+            cursor: pointer;
+            transition: all 300ms ease;
+            letter-spacing: .1em;
+
+            color: #81bdd5;
+            border: 2px solid #81bdd5;
+            border-radius: 0;
+            background: transparent;
+            text-shadow: none;
+            &:hover
+            {
+                color: #fff;
+                background: #00a2d0;
+            }
+        }
+    }
+    .rbox-opening-list,
+    .rbox-opening-detail
+    {
+        width: 700px;
+        margin: auto;
+	    a
+	    {
+	        color: #3cb8ea;
+	    }
+    }
+    .rbox-opening-position-type,
+    .rbox-opening-allows-remote
+    {
+        border-color: #3cb8ea;
+    }
+    .rbox-opening-li
+    {
+        padding: 30px 0;
+
+        border-color: rgba(#81bdd5, .5);
+    }
+    .rbox-opening-position-info
+    {
+        float: right;
+
+        margin-top: -5px;
+    }
+    .rbox-job-shortdesc
+    {
+        margin-top: 10px;
+    }
+    .rbox-job-fullpage
+    {
+        .rbox-top-links
+        {
+            margin-bottom: 40px;
+        }
+        .rbox-bottom-links
+        {
+            margin-top: 40px;
+        }
+        .rbox-top-links:hover,
+        .rbox-bottom-links:hover
+        {
+            text-decoration: underline;
+        }
+        .rbox-job-shortdesc,
+        .rbox-opening-position-info
+        {
+            display: inline-block;
+        }
+        .rbox-opening-position-info
+        {
+            margin-top: 7px;
+        }
+        .rbox-job-longdesc
+        {
+            display: block;
+
+            min-height: 22px;
+            margin-top: 30px;
+            padding-top: 20px;
+
+            border-top: 1px dotted rgba(127, 127, 127, .2);
+            ul
+            {
+                padding-left: 20px;
+                li
+                {
+                    line-height: 30px;
+
+                    list-style: circle;
+                }
+            }
+        }
+        .rbox-application form
+        {
+            margin-top: 0;
+            padding-top: 45px;
+
+            border-top: 1px dotted rgba(127,127,127,.2);
+            fieldset
+            {
+                padding-top: 0;
+            }
+            label
+            {
+                padding-top: 0;
+                padding-bottom: 10px;
+            }
+            #candidate_first_name,
+            #candidate_last_name,
+            #candidate_phone,
+            #resume
+            {
+                display: inline-block;
+
+                width: 49%;
+
+                vertical-align: top;
+            }
+            #candidate_last_name,
+            #resume
+            {
+                margin-left: 10px;
+            }
+            #resume input
+            {
+                font-size: 17px;
+
+                padding: 19px;
+            }
+            .rbox-error input
+            {
+                color: #b94a48;
+                border-color: #b94a48;
+            }
+            input
+            {
+                font: italic 100 25px 'Lato Regular', 'Lato', helvetica;
+
+                width: 100%;
+                max-width: 700px;
+                padding: 15px;
+
+                text-align: left !important;
+                letter-spacing: .1em;
+
+                color: gray;
+                border: 1px solid #ccc;
+                border-radius: 0;
+                background: rgba(255,255,1255, .4);
+            }
+        }
+    }
+}
+
+
 
 @import 'footer';
 @import 'modal';

@@ -61,6 +61,8 @@ module.exports = function (grunt) {
         },
         options: {
           watchTask: true,
+          tunnel: true,
+          tunnel: 'onyo',
           proxy: 'local.onyo.com',
           open: false
         }

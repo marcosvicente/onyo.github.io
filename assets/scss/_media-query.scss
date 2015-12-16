@@ -46,11 +46,11 @@
 
 @media only screen and (max-width: 1016px)
 {
-    .container .block.light > p
+    .container .block.light
     {
-        padding: 170px 60px;
+        padding: 170px 40px;
     }
-    .container > .block > p > .btn
+    .container > .block > .btn
     {
         font-size: 40px;
 
@@ -99,16 +99,11 @@
         visibility: hidden;
     }
 
-    .container > .block > p > .btn
+    .container > .block > .btn
     {
         font-size: 42px;
 
         padding: 19px 75px;
-    }
-
-    .container .block.light > p
-    {
-        padding: 170px 10px;
     }
 
     .section.typing > .content p
