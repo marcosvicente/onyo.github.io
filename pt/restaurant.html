@@ -6,14 +6,14 @@
 	<title>Onyo Inc</title>
 
 	<link rel='shortcut icon' href='../assets/images/favicon.ico'/>
-	<link rel="stylesheet" href='../assets/css/main.css'>
-	<link rel='stylesheet' href='../assets/css/Lato.css'>
+	<link rel='stylesheet' href='../assets/css/style.css'>
 </head>
 <body data-format='restaurant'>
 	<div id="menu">
 		<a class="about" href="/about">about</a>
 		<a class="places" href="/places">places</a>
 		<a class="talk" href="/contact">contact</a>
+		<a class="jobs" href="/jobs">carreira</a>
 	</div>
 	<section class="container">
 		<div class="nav">
@@ -44,13 +44,13 @@
 			</div>
 		</div>
 		<div class="block light">
-			<p><a id="button" class="btn talk" href="#">lets talk</a></p>
+			<a id="button" class="btn talk" href="#">lets talk</a>
 		</div>
 		<div id="about" class="block section typing">
-			<div class="background">
+			<!-- <div class="background">
 				<img src="../assets/images/slide_home_block.jpg">
-			</div>
-			<div class="content">
+			</div> -->
+			<div class="content reset-margin">
 				<div class="data">
 					<img src="../assets/images/icon-logo-onyo.png">
 					<div class="texts">
@@ -112,10 +112,10 @@
 				</div>
 			</div>
 			<div class="block section form" id="form">
-				<div class="background">
+				<!-- <div class="background">
 					<img src="../assets/images/footer_background.jpg">
-				</div>
-				<div class="content">
+				</div> -->
+				<div class="content reset-margin">
 					<div class="data">
 						<h2>SP</h2>
 						<p>são paulo</p>
@@ -134,6 +134,20 @@
 						<h2>:)</h2>
 					</div>
 				</div>
+			</div>
+			<div id="jobs">
+				<script type="text/javascript" id="rbox-loader-script">
+					if(!window._rbox){
+						_rbox = { host_protocol:document.location.protocol, ready:function(cb){this.onready=cb;} };
+						(function(d, e) {
+							var s, t, i, src=['/static/client-src-served/widget/39839/rbox_api.js', '/static/client-src-served/widget/39839/rbox_impl.js'];
+							t = d.getElementsByTagName(e); t=t[t.length - 1];
+							for(i=0; i<src.length; i++) {
+								s = d.createElement(e); s.src = _rbox.host_protocol + '//w.recruiterbox.com' + eval("src" + String.fromCharCode(91) + String(i) + String.fromCharCode(93));
+								t.parentNode.insertBefore(s, t.nextSibling);
+							}})(document, 'script');
+					}
+				</script>
 			</div>
 		</section>
 		<footer>
