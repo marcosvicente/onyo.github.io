@@ -6,14 +6,14 @@
 	<title>Onyo Inc</title>
 
 	<link rel='shortcut icon' href='assets/images/favicon.ico'/>
-	<link rel="stylesheet" href='assets/css/main.css'>
-	<link rel='stylesheet' href='assets/css/Lato.css'>
+	<link rel='stylesheet' href='assets/css/style.css'>
 </head>
 <body data-format='restaurant'>
 	<div id="menu">
 		<a class="about" href="/about">about</a>
 		<a class="places" href="/places">places</a>
 		<a class="talk" href="/contact">contact</a>
+		<a class="jobs" href="/jobs">join our team</a>
 	</div>
 	<section class="container">
 		<div class="nav">
@@ -43,17 +43,11 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="block">
-			<p><img src="assets/images/icon-play.png"></p>
-		</div> -->
 		<div class="block light">
-			<p><a id="button" class="btn talk" href="#">lets talk</a></p>
+			<a id="button" class="btn talk" href="#">lets talk</a>
 		</div>
 		<div id="about" class="block section typing">
-			<div class="background">
-				<img src="assets/images/slide_home_block.jpg">
-			</div>
-			<div class="content">
+			<div class="content reset-margin">
 				<div class="data">
 					<img src="assets/images/icon-logo-onyo.png">
 					<div class="texts">
@@ -115,10 +109,7 @@
 			</div>
 		</div>
 		<div class="block section form" id="form">
-			<div class="background">
-				<img src="assets/images/footer_background.jpg">
-			</div>
-			<div class="content">
+			<div class="content reset-margin">
 				<div class="data">
 					<h2>SP</h2>
 					<p>são paulo</p>
@@ -138,6 +129,21 @@
 				</div>
 			</div>
 		</div>
+		<div id="jobs">
+			<h2>Join our team</h2>
+			<script type="text/javascript" id="rbox-loader-script">
+				if(!window._rbox){
+					_rbox = { host_protocol:document.location.protocol, ready:function(cb){this.onready=cb;} };
+					(function(d, e) {
+						var s, t, i, src=['/static/client-src-served/widget/39839/rbox_api.js', '/static/client-src-served/widget/39839/rbox_impl.js'];
+						t = d.getElementsByTagName(e); t=t[t.length - 1];
+						for(i=0; i<src.length; i++) {
+							s = d.createElement(e); s.src = _rbox.host_protocol + '//w.recruiterbox.com' + eval("src" + String.fromCharCode(91) + String(i) + String.fromCharCode(93));
+							t.parentNode.insertBefore(s, t.nextSibling);
+						}})(document, 'script');
+				}
+			</script>
+		</div>
 	</section>
 	<footer>
 		<div class="content">
@@ -145,27 +151,27 @@
 		</div>
 	</footer>
 
-<!-- jQuery 1.11.2 -->
-<script src="assets/js/jquery-1.11.2.min.js"></script>
+	<!-- jQuery 1.11.2 -->
+	<script src="assets/js/jquery-1.11.2.min.js"></script>
 
-<!-- Typed • Docs: https://github.com/mattboldt/typed.js/ -->
-<script src="assets/js/typed.min.js"></script>
+	<!-- Typed • Docs: https://github.com/mattboldt/typed.js/ -->
+	<script src="assets/js/typed.min.js"></script>
 
-<!-- Environment.js -->
-<script src="assets/js/environment.js"></script>
+	<!-- Environment.js -->
+	<script src="assets/js/environment.js"></script>
 
-<!-- App.js -->
-<script src="assets/js/app.js"></script>
+	<!-- App.js -->
+	<script src="assets/js/app.js"></script>
 
-<!-- Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-53584757-1', 'auto');
-  ga('send', 'pageview');
-</script>
+		ga('create', 'UA-53584757-1', 'auto');
+		ga('send', 'pageview');
+	</script>
 </body>
 </html>

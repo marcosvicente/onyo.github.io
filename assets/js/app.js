@@ -7,10 +7,8 @@ $(window).load(function(){
         contentType: 'html',
         typeSpeed: 20,
         startDelay: 1000,
-        backDelay: 1000,
-        loop: true,
+        backDelay: 1000
       });
-
 	$('.about').on('click', function(event) {
 		event.preventDefault();
    		$('html, body').animate({
@@ -29,10 +27,20 @@ $(window).load(function(){
     	return false;
 	});
 
+
 	$('.talk').on('click', function(event) {
 		event.preventDefault();
    		$('html, body').animate({
         	scrollTop: $("#form").offset().top
+    	}, 1200);
+
+    	return false;
+	});
+
+	$('.jobs').on('click', function(event) {
+		event.preventDefault();
+   		$('html, body').animate({
+        	scrollTop: $("#jobs").offset().top
     	}, 1200);
 
     	return false;
