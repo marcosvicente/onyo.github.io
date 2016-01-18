@@ -32,6 +32,7 @@ $(window).load(function(){
 	$('.talk').on('click', function(event) {
 		event.preventDefault();
 		changeSection('contact');
+		$('#contact-form [name=email]')[0].focus();
 		return false;
 	});
 
