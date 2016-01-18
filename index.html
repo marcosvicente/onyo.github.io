@@ -10,10 +10,10 @@
 </head>
 <body data-format="consumer">
 	<div id="menu">
-		<a class="about" href="/about">about</a>
-		<a class="places" href="/places">places</a>
-		<a class="talk" href="/contact">contact</a>
-		<a class="jobs" href="/jobs">join our team</a>
+		<a class="about" href="#about">about</a>
+		<a class="places" href="#places">places</a>
+		<a class="talk" href="#contact">contact</a>
+		<a class="jobs" href="#jobs">join our team</a>
 	</div>
 	<section class="container">
 		<div class="nav">
@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		<div class="block light">
-			<a id="button" class="btn talk" href="#">lets talk</a>
+			<a id="button" class="btn talk" href="#contact">lets talk</a>
 		</div>
 		<div id="about" class="block section typing">
 			<div class="content reset-margin">
@@ -103,14 +103,14 @@
 				</div>
 			</div>
 		</div>
-		<div class="block section form" id="form">
+		<div class="block section form" id="contact">
 			<div class="content reset-margin">
 				<div class="data">
 					<h2>SP</h2>
 					<p>são paulo</p>
 					<p>+55 (21) 3942-2102</p>
 					<div class="inputs">
-						<form id="contact" action="http://api.staging.onyo.com/v1/web/message">
+						<form id="contact-form" action="http://api.staging.onyo.com/v1/web/message">
 							<p><input name="email" type="email" placeholder="your e-mail" required></p>
 							<p><input name="phone" type="text" placeholder="your phone"></p>
 							<p><textarea name="message" placeholder="message" id="message" cols="10" rows="3" required></textarea></p>

@@ -1,3 +1,11 @@
+function changeSection(sectionName) {
+	var name = '#' + sectionName;
+		$('html, body').animate({
+			scrollTop: $(name).offset().top
+		}, 1200);
+	window.location.hash = name;
+}
+
 $(window).load(function(){
 	var env = environment(),
 		actual = 1;
@@ -11,46 +19,34 @@ $(window).load(function(){
       });
 	$('.about').on('click', function(event) {
 		event.preventDefault();
-   		$('html, body').animate({
-        	scrollTop: $("#about").offset().top
-    	}, 1200);
-
-    	return false;
+		changeSection('about');
+		return false;
 	});
 
 	$('.places').on('click', function(event) {
 		event.preventDefault();
-   		$('html, body').animate({
-        	scrollTop: $("#places").offset().top
-    	}, 1200);
-
-    	return false;
+		changeSection('places');
+		return false;
 	});
-
 
 	$('.talk').on('click', function(event) {
 		event.preventDefault();
-   		$('html, body').animate({
-        	scrollTop: $("#form").offset().top
-    	}, 1200);
-
-    	return false;
+		changeSection('contact');
+		$('#contact-form [name=email]')[0].focus();
+		return false;
 	});
 
 	$('.jobs').on('click', function(event) {
 		event.preventDefault();
-   		$('html, body').animate({
-        	scrollTop: $("#jobs").offset().top
-    	}, 1200);
-
-    	return false;
+		changeSection('jobs');
+		return false;
 	});
 
 	$('.form').submit(function() {
 		var url = 'http://api.staging.onyo.com/v1/web/message',
-			email = $('#contact [name=email]')[0].value,
-			phone = $('#contact [name=phone]')[0].value,
-			message = $('#contact [name=message]')[0].value;
+			email = $('#contact-form [name=email]')[0].value,
+			phone = $('#contact-form [name=phone]')[0].value,
+			message = $('#contact-form [name=message]')[0].value;
 
 		var formData = {email: email, phone: phone, message: message};
 		$.ajax({
@@ -58,9 +54,9 @@ $(window).load(function(){
 			url: url,
 			data: formData,
 			success: function(response) {
-				$('#contact [name=email]')[0].value = '';
-				$('#contact [name=phone]')[0].value = '';
-				$('#contact [name=message]')[0].value = '';
+				$('#contact-form [name=email]')[0].value = '';
+				$('#contact-form [name=phone]')[0].value = '';
+				$('#contact-form [name=message]')[0].value = '';
 				$('.errorResponse').hide();
 				$('.emailResponse').fadeIn();
 			},
@@ -98,18 +94,18 @@ $(window).load(function(){
 
 	$('.flexCity').on('click', function(event) {
 		event.preventDefault();
-		var paragraphsForm 	= $('#form p'),
+		var paragraphsForm 	= $('#contact p'),
 		 	paragraphsBlock = $(this).children('.content').children('p');
 
 		$(this).children('content').fadeIn();
 		$(this).children('emailResponse').fadeOut();
 
-		$('#form h2').text($(this).data('city'));
+		$('#contact h2').text($(this).data('city'));
 		$(paragraphsForm[0]).text($(paragraphsBlock[0]).text());
 		$(paragraphsForm[1]).text($(paragraphsBlock[1]).text());
 
 		$('html, body').animate({
-        	scrollTop: $("#form").offset().top
+        	scrollTop: $("#contact").offset().top
     	}, 600);
 	});
 
