@@ -29,10 +29,9 @@ $(window).load(function(){
 		return false;
 	});
 
-
 	$('.talk').on('click', function(event) {
 		event.preventDefault();
-		changeSection('form');
+		changeSection('contact');
 		return false;
 	});
 
@@ -44,9 +43,9 @@ $(window).load(function(){
 
 	$('.form').submit(function() {
 		var url = 'http://api.staging.onyo.com/v1/web/message',
-			email = $('#contact [name=email]')[0].value,
-			phone = $('#contact [name=phone]')[0].value,
-			message = $('#contact [name=message]')[0].value;
+			email = $('#contact-form [name=email]')[0].value,
+			phone = $('#contact-form [name=phone]')[0].value,
+			message = $('#contact-form [name=message]')[0].value;
 
 		var formData = {email: email, phone: phone, message: message};
 		$.ajax({
@@ -54,9 +53,9 @@ $(window).load(function(){
 			url: url,
 			data: formData,
 			success: function(response) {
-				$('#contact [name=email]')[0].value = '';
-				$('#contact [name=phone]')[0].value = '';
-				$('#contact [name=message]')[0].value = '';
+				$('#contact-form [name=email]')[0].value = '';
+				$('#contact-form [name=phone]')[0].value = '';
+				$('#contact-form [name=message]')[0].value = '';
 				$('.errorResponse').hide();
 				$('.emailResponse').fadeIn();
 			},
@@ -94,18 +93,18 @@ $(window).load(function(){
 
 	$('.flexCity').on('click', function(event) {
 		event.preventDefault();
-		var paragraphsForm 	= $('#form p'),
+		var paragraphsForm 	= $('#contact p'),
 		 	paragraphsBlock = $(this).children('.content').children('p');
 
 		$(this).children('content').fadeIn();
 		$(this).children('emailResponse').fadeOut();
 
-		$('#form h2').text($(this).data('city'));
+		$('#contact h2').text($(this).data('city'));
 		$(paragraphsForm[0]).text($(paragraphsBlock[0]).text());
 		$(paragraphsForm[1]).text($(paragraphsBlock[1]).text());
 
 		$('html, body').animate({
-        	scrollTop: $("#form").offset().top
+        	scrollTop: $("#contact").offset().top
     	}, 600);
 	});
 
