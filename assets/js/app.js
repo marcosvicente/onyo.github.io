@@ -1,3 +1,11 @@
+function changeSection(sectionName) {
+	var name = '#' + sectionName;
+		$('html, body').animate({
+			scrollTop: $(name).offset().top
+		}, 1200);
+	window.location.hash = name;
+}
+
 $(window).load(function(){
 	var env = environment(),
 		actual = 1;
@@ -11,39 +19,27 @@ $(window).load(function(){
       });
 	$('.about').on('click', function(event) {
 		event.preventDefault();
-   		$('html, body').animate({
-        	scrollTop: $("#about").offset().top
-    	}, 1200);
-
-    	return false;
+		changeSection('about');
+		return false;
 	});
 
 	$('.places').on('click', function(event) {
 		event.preventDefault();
-   		$('html, body').animate({
-        	scrollTop: $("#places").offset().top
-    	}, 1200);
-
-    	return false;
+		changeSection('places');
+		return false;
 	});
 
 
 	$('.talk').on('click', function(event) {
 		event.preventDefault();
-   		$('html, body').animate({
-        	scrollTop: $("#form").offset().top
-    	}, 1200);
-
-    	return false;
+		changeSection('form');
+		return false;
 	});
 
 	$('.jobs').on('click', function(event) {
 		event.preventDefault();
-   		$('html, body').animate({
-        	scrollTop: $("#jobs").offset().top
-    	}, 1200);
-
-    	return false;
+		changeSection('jobs');
+		return false;
 	});
 
 	$('.form').submit(function() {
