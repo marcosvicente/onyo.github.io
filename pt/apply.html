@@ -1,35 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Onyo Inc</title>
-
-	<link rel='shortcut icon' href='../assets/images/favicon.ico'/>
-	<link rel="stylesheet" href='../assets/css/main.css'>
-	<link rel='stylesheet' href='../assets/css/Lato.css'>
-</head>
-<body data-format="consumer">
-	<div id="menu">
-		<a class="about" href="#about">sobre</a>
-		<a class="places" href="#places">onde</a>
-		<a class="talk" href="#contact">contato</a>
-		<a class="jobs" href="#jobs">junte-se a nós</a>
-	</div>
-	<section class="container">
-		<div class="nav">
-			<div class="nav-toggle">
-				<span></span>
-			</div>
-		</div>
-		<div class="login">
-			<a href="../index.html" class="lang">en</a>
-			<a href="http://admin.onyo.com">LOGIN</a>
-			<a href="restaurant.html" class="type">RESTAURANTE</a>
-		</div>
-		<div id="places" class="block cities">
-				<script type="text/javascript" id="rbox-loader-script">
-		if(!window._rbox){
+<!DOCTYPE html><html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Onyo Inc</title><link rel="shortcut icon" href="../assets/images/favicon.ico"><link rel="stylesheet" href="../assets/css/main.css"><link rel="stylesheet" href="../assets/css/Lato.css"></head><body data-format="consumer"><div id="menu"><a class="about" href="#about">sobre</a> <a class="places" href="#places">onde</a> <a class="talk" href="#contact">contato</a> <a class="jobs" href="#jobs">junte-se a nós</a></div><section class="container"><div class="nav"><div class="nav-toggle"><span></span></div></div><div class="login"><a href="../index.html" class="lang">en</a> <a href="http://admin.onyo.com">LOGIN</a> <a href="restaurant.html" class="type">RESTAURANTE</a></div><div id="places" class="block cities"><script type="text/javascript" id="rbox-loader-script">if(!window._rbox){
 			_rbox = { host_protocol:document.location.protocol, ready:function(cb){this.onready=cb;} };
 			(function(d, e) {
 				var s, t, i, src=['/static/client-src-served/widget/39839/rbox_api.js', '/static/client-src-served/widget/39839/rbox_impl.js'];
@@ -38,37 +7,14 @@
 					s = d.createElement(e); s.src = _rbox.host_protocol + '//w.recruiterbox.com' + eval("src" + String.fromCharCode(91) + String(i) + String.fromCharCode(93));
 					t.parentNode.insertBefore(s, t.nextSibling);
 				}})(document, 'script');
-			}
-		</script>
-		<style type="text/css">
-			.rbox-opening-list{
+			}</script><style type="text/css">.rbox-opening-list{
 				width: 580px;
 				margin: auto;
 			}
 			.rbox-opening-list a,
 			.rbox-opening-detail a{
 				color: #fff;
-			}
-		</style>
-		</div>
-	</section>
-	<footer>
-		<div class="content">
-			<div class="left"><a href="/pt"><img src="../assets/images/icon-logo-onyo-small.png" alt="Onyo"></a></div>
-			<div class="right"><a href="#" id="manual-ajax">Termos e condições</a></div>
-		</div>
-	</footer>
-
-	<!-- jQuery 1.11.2 -->
-	<script src="../assets/js/jquery-1.11.2.min.js"></script>
-
-	<!-- Typed • Docs: https://github.com/mattboldt/typed.js/ -->
-	<script src="../assets/js/typed.min.js"></script>
-
-	<!-- Modal • Docs: https://github.com/kylefox/jquery-modal -->
-	<script type="text/javascript" src="../assets/js/modal.min.js"></script>
-	<script>
-		$('#manual-ajax').on('click', function(event) {
+			}</style></div></section><footer><div class="content"><div class="left"><a href="/pt"><img src="../assets/images/icon-logo-onyo-small.png" alt="Onyo"></a></div><div class="right"><a href="#" id="manual-ajax">Termos e condições</a></div></div></footer><script src="../assets/js/jquery-1.11.2.min.js"></script><script src="../assets/js/typed.min.js"></script><script type="text/javascript" src="../assets/js/modal.min.js"></script><script>$('#manual-ajax').on('click', function(event) {
 			event.preventDefault();
 			$.get('http://api.onyo.com/v1/mobile/onyo/terms', function(res) {
 				$('.modal p').text(res.text);
@@ -76,24 +22,10 @@
 					closeText: 'Fechar'
 				});
 			});
-		});
-	</script>
-
-	<!-- Environment.js -->
-	<script src="../assets/js/environment.js"></script>
-
-	<!-- App.js -->
-	<script src="../assets/js/app.js"></script>
-
-	<!-- Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		});</script><script src="../assets/js/environment.js"></script><script src="../assets/js/app.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
 		ga('create', 'UA-53584757-1', 'auto');
-		ga('send', 'pageview');
-	</script>
-</body>
-</html>
+		ga('send', 'pageview');</script></body></html>

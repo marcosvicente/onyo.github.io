@@ -17,6 +17,36 @@ module.exports = function (grunt) {
         }
       }
     },
+    concat:{
+        dist:{
+            src: ['assets/js/**/*.js'],
+            dest: 'assets/js/scripts.js'
+        }
+    },
+    uglify:{
+        scripts:{
+            src:['assets/js/scripts.js'],
+            dest: 'assets/js/scripts.min.js'
+        }
+    },
+    cssmin :{
+        all:{
+            src: ['assets/css/**/*.css'],
+            dest: 'assets/css/styles.min.css'
+        }
+    },
+    htmlmin: {
+        options: {
+            removeComments: true,
+            collapseWhitespace: true
+        },
+        pt:{
+            expand: true,
+            cwd: 'pt/',
+            src : ['*.html'],
+            dest: 'pt/'
+        }
+    },
     sass: {
       options:{
         sourcemap: 'file',
@@ -75,6 +105,9 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
-
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.registerTask('default', ['browserSync', 'watch']);
 };
